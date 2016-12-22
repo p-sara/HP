@@ -1,0 +1,121 @@
+html {
+  box-sizing: border-box;
+  overflow:hidden;
+}
+body {
+  margin:0;
+  height:100vh;
+  background-color:#000;
+  overflow-y:auto;
+  overflow-x:hidden;
+  perspective: 1px;
+}
+.sky {
+  width:100%;
+  height:100vh;
+  background-image: url("../img/stars.png");
+  background-size: cover;
+}
+.sky .blinking {
+  height:100vh;
+  width:100%;
+  position:absolute;
+  top:0;
+  background: url(../img/blink.png) repeat top center;
+  animation:twinkling 300s linear infinite;
+}
+.sky .blinking .harryP {
+  width:50%; 
+  display:block;
+  margin:0 auto;
+  padding-top:200px;
+}
+
+.sky2 {
+  width:100%;
+  height:60vh;
+  background-image: url("../img/stars2.png");
+  background-size: cover;
+}
+.parallax-group {
+  transform-style: preserve-3d;
+  
+}
+.parallax-img {
+  height:600px;
+  width:70%;
+  background-size:70% auto;
+  position:absolute;
+   top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+   background-repeat: no-repeat;
+  overflow-y: auto;
+}
+.hog1{
+  background-image:url("../img/hog1.png");
+  background-repeat: no-repeat;
+  height:900px;
+  width:100%;
+  transform:translateZ(-5px) translateX(-10%) scale(3);
+position: fixed;
+    left: -350px;
+}
+.hog2{
+  background-image:url("../img/hog2.png");
+  transform:translateZ(-4.5px) scale(6) translateX(15%) translateY(23%);
+}
+.hog3{
+  background-image:url("../img/hog3.png");
+  transform: translateZ(-4px) scale(5) translateX(14%) translateY(27%);
+}
+
+.break {
+  width:100%;
+  height:500vh;
+  background-color:black;
+}
+.diagonAlley {
+  height:150vh;
+  width:100%;
+  background: #000 url("../img/diagon.png") no-repeat;
+  background-size:100%;
+  background-position:bottom;
+}
+.diagonAlley .walkMan {
+  
+  height:200px;
+  top: 75%;
+  transform: translateY(-50%);
+  left:50%;
+  transform: translateX(-50%);
+}
+
+.fixed {
+  position:fixed;
+  bottom:0;
+  left:0;
+}
+
+@keyframes swim {
+  from{transform: translateX(0);}
+  to{transform: translateX(1000px);}
+}
+@keyframes jump {
+  0% {transform: translateY(12px);}
+  10% {transform: translateY(-2px);}
+  20% {transform: translateY(12px);}
+  30% {transform: translateY(-5px);}
+  40% {transform: translateY(22px);}
+  50% {transform: translateY(-2px);}
+  60% {transform: translateY(30px);}
+  70% {transform: translateY(-12px);}
+  80% {transform: translateY(-2px);}
+  90% {transform: translateY(15px);}
+  100% {transform: translateY(-2px);}
+}
+@keyframes twinkling {
+  from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
